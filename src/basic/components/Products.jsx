@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useProducts from '../../hooks/use-products';
 
-export default function Products() {    
+export default function Products() {        
   const [checked, setChecked] = useState(false);       
   const [loading, error, products] = useProducts({ salesOnly: checked });
   const handleChange = () => setChecked((prev) => !prev);
